@@ -1,53 +1,35 @@
 <link rel="stylesheet" href="style.css">
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba de Desarrollo</title>
-    <style>
-        /* Esto es CSS dentro del HTML para ir rápido */
-        body {
-            background-color: #1e1e1e;
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background-color: #333;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-            text-align: center;
-            border: 2px solid #007acc;
-        }
-        h1 { color: #007acc; }
-        button {
-            background-color: #007acc;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        button:hover { background-color: #005a9e; }
-    </style>
-</head>
-<body>
-
-    <div class="card">
-        <h1>¡Conexión Exitosa! 🚀</h1>
-        <p>Si ves este recuadro oscuro con bordes azules,</p>
-        <p><strong>HTML y CSS</strong> prueba conexion github exitosa .</p>
-        <button onclick="alert('¡JavaScript también funciona!')">Probar JS</button>
+<header class="header">
+    <div class="header__logo">
+        <img src="base mascotas\corazon.PNG" alt="Huellas de Amor">
+        <span>Huellas de Amor</span>
+    </div>
+    <nav class="header__nav">
+        <ul>
+            <li><a href="#">Adopta</a></li>
+            <li><a href="#">¿Cómo funciona?</a></li>
+            <li><a href="#">Historias</a></li>
+        </ul>
+    </nav>
+    <button class="header__donate-button">Donar</button>
+</header>
+<section class="hero">
+    <div class="hero__content">
+        <h1>Dales una <br> <span>segunda oportunidad</span></h1>
+        <p>Encuentra a tu mejor amigo y cambia una vida para siempre. Ellos te están esperando.</p>
+        <button class="hero__btn">Adoptar ahora</button>
     </div>
 
-</body>
-</html>
+    <div class="hero__image-container">
+        <img src="base mascotas/manchas.jpeg" alt="Perritos buscando hogar" class="hero__main-img">
+        
+        <div class="hero__stats">
+            <span class="heart-icon">❤️</span>
+            <div>
+                <strong>Más de 500</strong>
+                <span>vidas salvadas</span>
+            </div>
+        </div>
+    </div>
+</section>

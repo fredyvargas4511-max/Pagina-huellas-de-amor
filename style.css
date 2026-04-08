@@ -1,0 +1,138 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Color de fondo claro, similar al del diseño */
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 40px; /* Ajusta el tamaño del logo según sea necesario */
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header__logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* Color del texto del logo */
+}
+
+.header__nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header__nav li {
+    margin: 0 15px;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: #555; /* Color de los enlaces */
+    font-size: 16px;
+}
+
+.header__donate-button {
+    background-color: #ffc107; /* Color de fondo del botón, similar al del diseño */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Configuración general de la sección */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background-color: #fdf6f0; /* Color crema de fondo */
+    min-height: 80vh;
+}
+
+/* Columna de la izquierda (Texto) */
+.hero__content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero__content h1 {
+    font-size: 3.5rem;
+    color: #333;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero__content h1 span {
+    color: #f2a365; /* El color naranja de tu diseño */
+}
+
+.hero__content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero__btn {
+    background-color: #f2a365;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px; /* Bordes muy redondeados como en Figma */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(242, 163, 101, 0.3);
+}
+
+/* Columna de la derecha (Imagen) */
+.hero__image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero__main-img {
+    width: 90%;
+    border-radius: 30px; /* Esquinas redondeadas de la foto */
+    object-fit: cover;
+}
+
+/* El cuadrito de estadísticas flotante */
+.hero__stats {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hero__stats strong {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.hero__stats span {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.heart-icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}

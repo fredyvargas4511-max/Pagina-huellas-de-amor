@@ -466,3 +466,17 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* Esto hace que el scroll sea suave en toda la página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Esto fija el menú arriba */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white; /* Importante para que no sea transparente al bajar */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}

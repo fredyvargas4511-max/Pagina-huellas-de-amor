@@ -136,3 +136,329 @@
     margin-right: 10px;
     font-size: 1.2rem;
 }
+
+.perritos-seccion {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+.perritos-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.perritos-header p {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* El Grid para las 3 columnas */
+.perritos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Estilo de la Tarjeta */
+.card-perrito {
+    background: #fdfaf7; /* Fondo color crema suave */
+    border-radius: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-perrito:hover {
+    transform: translateY(-10px); /* Efecto al pasar el mouse */
+}
+
+.card-img-container {
+    position: relative;
+    height: 250px;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botón de favoritos (corazón arriba a la derecha) */
+.fav-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    background: #e9f5e9;
+    color: #4caf50;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.edad {
+    color: #888;
+    margin: 5px 0 20px 0;
+}
+
+.conocer-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d3c4b4;
+    background: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+}
+
+.conocer-btn:hover {
+    background: #f2e8df;
+}
+
+.ver-todos {
+    color: #f2a365;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 1. Modifica el contenedor para darle un aspecto cuadrado o más alto */
+.card-img-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Un color de fondo gris claro para las áreas "vacías" de la imagen */
+    border-top-left-radius: 25px; /* Mantén las esquinas redondeadas arriba */
+    border-top-right-radius: 25px;
+}
+
+/* 2. Modifica la imagen para que se adapte al contenedor */
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 'contain' escala la imagen para que quepa COMPLETAMENTE dentro de la caja, sin cortarse */
+    object-position: center; /* Asegura que la imagen esté centrada si no llena todo el espacio */
+}
+
+/* Estilo base del botón (ya lo tienes, solo asegúrate de que tenga la transición) */
+.fav-btn {
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    color: #ccc; /* Color gris cuando no es favorito */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Esta es la clase que añadiremos con JavaScript */
+.fav-btn.active {
+    color: #ff4d4d; /* Rojo para el favorito */
+    transform: scale(1.2); /* Un pequeño efecto de agrandado */
+}
+
+/* Efecto hover opcional */
+.fav-btn:hover {
+    transform: scale(1.1);
+    background-color: #fff0f0;
+}
+
+.fav-btn {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ccc; /* Color del borde del corazón vacío */
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CUANDO ESTÁ ACTIVO */
+.fav-btn.active {
+    color: #ff4d4d !important; /* El color rojo */
+    border-color: #ff4d4d;
+    background-color: #fff0f0;
+}
+
+/* Cambiamos el símbolo de vacío a lleno usando el script o CSS */
+
+.pasos-seccion {
+    padding: 80px 10%;
+    background-color: #f3f2ee; /* El color grisáceo suave de tu imagen */
+    text-align: center;
+}
+
+.pasos-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.pasos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative; /* Necesario para la línea absoluta */
+    margin-top: 50px;
+    gap: 20px;
+}
+
+/* La línea gris que conecta los pasos */
+.linea-conectora {
+    position: absolute;
+    top: 45px; /* Ajustado para que pase por el centro de los iconos */
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background-color: #d1d1d1;
+    z-index: 1;
+}
+
+.paso {
+    flex: 1;
+    position: relative;
+    z-index: 2; /* Para quedar por encima de la línea */
+}
+
+.paso__icon {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 20px; /* Bordes redondeados como en Figma */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.paso h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.paso p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    padding: 0 10px;
+}
+
+.historias-seccion {
+    padding: 80px 10%;
+    background-color: white;
+}
+
+.historias-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.historia-card {
+    background-color: #fdf6f0; /* El mismo crema que usamos en el Hero */
+    border-radius: 40px;
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Columna de imágenes */
+.historia__imagenes {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.foto-antes, .foto-despues {
+    position: relative;
+    flex: 1;
+}
+
+.historia__imagenes img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.badge--despues {
+    background: #a3b899; /* Un verde suave como en tu diseño */
+}
+
+/* Columna de texto */
+.historia__texto {
+    flex: 1;
+}
+
+.subtitulo-naranja {
+    color: #f2a365;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.historia__texto h2 {
+    font-size: 2.2rem;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.historia__texto p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.cita {
+    border-top: 1px solid #e0d5cb;
+    padding-top: 20px;
+    font-style: italic;
+    color: #444;
+}
+
+.cita cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-style: normal;
+    color: #333;
+}

@@ -382,7 +382,7 @@
 }
 
 .historia-card {
-    background-color: #fdf6f0; /* El mismo crema que usamos en el Hero */
+    background-color: #fdf6f0;
     border-radius: 40px;
     display: flex;
     padding: 50px;
@@ -421,7 +421,7 @@
 }
 
 .badge--despues {
-    background: #a3b899; /* Un verde suave como en tu diseño */
+    background: #a3b899; 
 }
 
 /* Columna de texto */

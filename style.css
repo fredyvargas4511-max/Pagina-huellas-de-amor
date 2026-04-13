@@ -480,3 +480,127 @@ html {
     background-color: white; /* Importante para que no sea transparente al bajar */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
+/* Formularios */
+.formulario-seccion {
+    padding: 80px 10%;
+    background-color: #fdf6f0;
+    display: flex;
+    justify-content: center;
+}
+
+.donar-seccion {
+    background-color: white;
+}
+
+.formulario-container {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 600px;
+}
+
+.donar-seccion .formulario-container {
+    background: #fdf6f0;
+}
+
+.formulario-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.formulario-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group.row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group-half {
+    flex: 1;
+}
+
+.form-group label, .form-group-half label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.form-group-half input,
+.form-group-half select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.form-group-half input:focus,
+.form-group-half select:focus {
+    outline: none;
+    border-color: #f2a365;
+    background-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-submit {
+    width: 100%;
+    background-color: #f2a365;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 15px rgba(242, 163, 101, 0.3);
+    margin-top: 10px;
+}
+
+.form-submit:hover {
+    background-color: #e5904d;
+}
+
+.form-submit-donar {
+    background-color: #ffc107;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.form-submit-donar:hover {
+    background-color: #e0a800;
+}
+
+@media (max-width: 600px) {
+    .form-group.row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

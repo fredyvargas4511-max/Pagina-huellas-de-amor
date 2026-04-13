@@ -21,7 +21,7 @@
                 <li><a href="#historias-inspiran">Historias</a></li>
             </ul>
         </nav>
-        <button class="header__donate-button">Donar</button>
+        <button class="header__donate-button" onclick="window.location.href='#donar'">Donar</button>
     </header>
 
     <main>
@@ -29,7 +29,7 @@
             <div class="hero__content">
                 <h1>Dales una <br> <span>segunda oportunidad</span></h1>
                 <p>Encuentra a tu mejor amigo y cambia una vida para siempre. Ellos te están esperando.</p>
-                <button class="hero__btn">Adoptar ahora</button>
+                <button class="hero__btn" onclick="window.location.href='#adoptar'">Adoptar ahora</button>
             </div>
 
             <div class="hero__image-container">
@@ -62,7 +62,7 @@
                             <span class="tag">Juguetona y leal</span>
                         </div>
                         <p class="edad">2 años</p>
-                        <button class="conocer-btn">Conocer más</button>
+                        <button class="conocer-btn" onclick="window.location.href='#adoptar'">Conocer más</button>
                     </div>
                 </article>
 
@@ -77,7 +77,7 @@
                             <span class="tag">Curiosa y tierna</span>
                         </div>
                         <p class="edad">3 meses</p>
-                        <button class="conocer-btn">Conocer más</button>
+                        <button class="conocer-btn" onclick="window.location.href='#adoptar'">Conocer más</button>
                     </div>
                 </article>
 
@@ -92,7 +92,7 @@
                             <span class="tag">Tranquilo y sabio</span>
                         </div>
                         <p class="edad">6 años</p>
-                        <button class="conocer-btn">Conocer más</button>
+                        <button class="conocer-btn" onclick="window.location.href='#adoptar'">Conocer más</button>
                     </div>
                 </article>
             </div>
@@ -139,7 +139,7 @@
             <div class="historia-card">
                 <div class="historia__imagenes">
                     <div class="foto-antes">
-                        <img src="base-mascotas/lola3.jpeg" alt="Lola antes">
+                        <img src="base-mascotas/lola.jpeg" alt="Lola antes">
                         <span class="badge">Antes</span>
                     </div>
                     <div class="foto-despues">
@@ -157,6 +157,74 @@
                         <cite>— Familia Martínez</cite>
                     </blockquote>
                 </div>
+            </div>
+        </section>
+
+        <section id="adoptar" class="formulario-seccion">
+            <div class="formulario-container">
+                <h2>Formulario de Adopción</h2>
+                <p>Déjanos tus datos y nos pondremos en contacto contigo para comenzar el proceso.</p>
+                <form id="form-adopcion">
+                    <div class="form-group row">
+                        <div class="form-group-half">
+                            <label for="nombre-adopcion">Nombre completo</label>
+                            <input type="text" id="nombre-adopcion" name="nombre" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        <div class="form-group-half">
+                            <label for="email-adopcion">Correo electrónico</label>
+                            <input type="email" id="email-adopcion" name="email" required placeholder="ejemplo@correo.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="form-group-half">
+                            <label for="telefono-adopcion">Teléfono</label>
+                            <input type="tel" id="telefono-adopcion" name="telefono" required placeholder="Tu número">
+                        </div>
+                        <div class="form-group-half">
+                            <label for="perrito-interes">Perrito de interés</label>
+                            <select id="perrito-interes" name="perrito">
+                                <option value="">Aún no estoy seguro</option>
+                                <option value="pepa">Pepa</option>
+                                <option value="pola">Pola</option>
+                                <option value="lukas">Lukas</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje-adopcion">¿Por qué deseas adoptar?</label>
+                        <textarea id="mensaje-adopcion" name="mensaje" rows="4" required placeholder="Cuéntanos un poco sobre ti y el hogar que ofreces..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Enviar Solicitud</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="donar" class="formulario-seccion donar-seccion">
+            <div class="formulario-container">
+                <h2>Formulario de Donación</h2>
+                <p>Tu aporte nos ayuda a rescatar, alimentar y cuidar más huellitas.</p>
+                <form id="form-donacion">
+                    <div class="form-group">
+                        <label for="nombre-donacion">Nombre</label>
+                        <input type="text" id="nombre-donacion" name="nombre" placeholder="Tu nombre o anónimo">
+                    </div>
+                    <div class="form-group row">
+                        <div class="form-group-half">
+                            <label for="monto-donacion">Monto a donar (COP)</label>
+                            <input type="number" id="monto-donacion" name="monto" required min="1000" placeholder="Ej: 50000">
+                        </div>
+                        <div class="form-group-half">
+                            <label for="metodo-pago">Método de pago</label>
+                            <select id="metodo-pago" name="metodo" required>
+                                <option value="tarjeta">Tarjeta de Crédito / Débito</option>
+                                <option value="pse">PSE</option>
+                                <option value="transferencia">Transferencia Bancaria</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="form-submit form-submit-donar">Donar Ahora</button>
+                </form>
             </div>
         </section>
     </main>

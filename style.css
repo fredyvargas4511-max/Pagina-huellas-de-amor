@@ -1,3 +1,9 @@
+img {
+    max-width: 100%;
+    height: auto; /* Esto evita que se estiren */
+    display: block;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -602,5 +608,67 @@ html {
     .form-group.row {
         flex-direction: column;
         gap: 0;
+    }
+}
+
+/* Ajustes para pantallas de menos de 768px (Celulares) */
+@media (max-width: 768px) {
+    
+    /* 1. Header: Apilar elementos o reducir espacio */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .header__nav ul {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* 2. Hero: Pasar de 2 columnas a 1 sola */
+    .hero {
+        flex-direction: column-reverse; /* La imagen arriba, el texto abajo */
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero__content h1 {
+        font-size: 2rem;
+    }
+
+    .hero__main-img {
+        width: 100%;
+        height: auto; /* Evita que se vea aplastada */
+    }
+
+    /* 3. Catálogo: 1 perro por fila */
+    .perritos-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 20px;
+    }
+
+    /* 4. Pasos: Apilar verticalmente */
+    .pasos-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .linea-conectora {
+        display: none; /* Quitamos la línea horizontal que se ve mal en móvil */
+    }
+
+    /* 5. Historias: Imagen arriba y texto abajo */
+    .historia-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .historia__imagenes {
+        flex-direction: column; /* Fotos una sobre otra */
+    }
+
+    .historia__imagenes img {
+        height: 200px; /* Reducimos la altura en móvil */
     }
 }
